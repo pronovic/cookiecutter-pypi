@@ -37,7 +37,7 @@ gha_matrix_python ['3.9', '3.10']:
 copyright_year [2022]:
 ```
 
-> The `black_target`, `gha_matrix_os`, and `gha_matrix_python` fields are all comma-separated lists and must be quoted as shown.
+> _Note:_ The `black_target`, `gha_matrix_os`, and `gha_matrix_python` fields are all comma-separated lists and must be quoted as shown.
 
 The input above results in a directory called `sample-project`.  Make it
 into a Git repository:
