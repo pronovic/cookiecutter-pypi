@@ -6,6 +6,8 @@ The project structure follows the pattern from the [apologies](https://github.co
 demonstration project, using my [run-script-framework](https://github.com/pronovic/run-script-framework) and
 shared GitHub Actions workflows from [gha-shared-workflows](https://github.com/pronovic/gha-shared-workflows).
 
+## Instructions for Use
+
 To use it, first install cookiecutter:
 
 ```
@@ -39,15 +41,15 @@ copyright_year [2022]:
 
 > _Note:_ The `black_target`, `gha_matrix_os`, and `gha_matrix_python` fields are all comma-separated lists and must be quoted as shown.
 
-The input above results in a directory called `sample-project`.  Make it
-into a Git repository:
+The template parameters above results in a directory called `sample-project`.
+Make it into a Git repository:
 
 ```
 git init . && git add . && git commit -m "Initial revision based on pronovic/cookiecutter-pypi"
 ```
 
-After that, follow the instructions in `DEVELOPER.md` to start working with
-the repository.  Start with:
+After that, follow the instructions in `DEVELOPER.md` to work with the
+repository.  Start with:
 
 ```
 run install && run suite
