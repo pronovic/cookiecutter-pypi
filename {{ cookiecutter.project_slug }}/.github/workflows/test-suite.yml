@@ -1,0 +1,23 @@
+# vim: set ft=yaml ts=2 sw=2 expandtab:
+name: Test Suite
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: '05 17 15 * *'  # 15th of the month at 5:05pm UTC
+concurrency:
+  group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
+  cancel-in-progress: true
+jobs:
+  build-and-test:
+    uses: pronovic/gha-shared-workflows/.github/workflows/poetry-build-and-test.yml@v2
+    secrets: inherit
+    with:
+      matrix-os-version: "[ {{ cookiecutter.gha_matrix_os }} ]"
+      matrix-python-version: "[ {{ cookiecutter.gha_matrix_python }} ]"
+      poetry-version: "1.2.0"
+      poetry-plugins: "poetry-plugin-export@==1.1.2"

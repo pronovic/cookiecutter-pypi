@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.short_description }}"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
+license = "Apache-2.0"
+readme = "PyPI.md"
+homepage = "https://pypi.org/project/{{ cookiecutter.project_slug }}/"
+repository = "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}"
+include = [
+   { path = 'Changelog', format = 'sdist' },
+   { path = 'LICENSE', format = 'sdist' },
+   { path = 'README.md', format = 'sdist' },
+   { path = 'docs', format = 'sdist' },
+   { path = 'tests', format = 'sdist' },
+]
+packages = [ 
+   { include = "{{ cookiecutter.package }}", from = "src" },
+]
+classifiers=[
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: Apache Software License",
+   "Development Status :: 4 - Beta",
+]
+
+[tool.poetry.dependencies]
+python = "{{ cookiecutter.python_version }}"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.2"
+pytest-testdox = "^3.0.1"
+coverage = "^6.3.2"
+pylint = "^2.15.0"
+toml = "^0.10.2"
+pre-commit = "^2.18.1"
+black = "^22.3.0"
+mypy = "^0.950"
+isort = "^5.10.1"
+sphinx-autoapi = "^1.8.4"
+coveralls = "^3.3.1"
+Sphinx = "^4.5.0"
+types-PyYAML = "^6.0.8"
+colorama = "^0.4.5"
+
+[tool.black]
+line-length = 132
+target-version = [{{ cookiecutter.black_target }}]
+include = '(src\/scripts\/.*$|\.pyi?$)'
+exclude = '''
+/(
+    \.git
+  | __pycache__
+  | \.tox
+  | \.venv
+  | \.poetry
+  | build
+  | dist
+  | docs
+  | notes
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 132
+skip_glob = [ "docs", "notes" ]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
