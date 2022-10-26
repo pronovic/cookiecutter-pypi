@@ -4,7 +4,7 @@
 
 This project uses [Poetry](https://python-poetry.org/) to manage Python packaging and dependencies.  Most day-to-day tasks (such as running unit tests from the command line) are orchestrated through Poetry.
 
-A coding standard is enforced using [Black](https://github.com/psf/black), [isort](https://pypi.org/project/isort/) and [Pylint](https://www.pylint.org/).  Python 3 type hinting is validated using [MyPy](https://pypi.org/project/mypy/).
+A coding standard is enforced using [Black](https://pypi.org/project/black/), [isort](https://pypi.org/project/isort/) and [Pylint](https://pypi.org/project/pylint/).  Python 3 type hinting is validated using [MyPy](https://pypi.org/project/mypy/).
 
 ## Pre-Commit Hooks
 
@@ -137,6 +137,8 @@ Basic tasks:
 - run suite: Run the complete test suite, as for the GitHub Actions CI build
 ```
 
+If you don't have `.` on your `$PATH`, make sure to use `./run` instead.
+
 ## Integration with PyCharm
 
 Currently, I use [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download) as 
@@ -160,6 +162,8 @@ virtualenv for PyCharm to use:
 ```
 run install && run suite
 ```
+
+If you don't have `.` on your `$PATH`, make sure to use `./run` instead.
 
 ### Open the Project
 
