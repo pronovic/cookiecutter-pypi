@@ -51,10 +51,22 @@ The project slug is the name of the resulting directory, so in this example the 
 git init . && git add . && git commit -m "Initial revision based on pronovic/cookiecutter-pypi"
 ```
 
-After that, follow the instructions in the resulting `DEVELOPER.md` file to work with the repository.  Assuming you have already installed `poetry` (per the [instructions](POETRY.md)), you can get things started using the `run` script:
+Assuming you have already installed `poetry` (per the [instructions](POETRY.md)), you can get things started using the `run` script.  First, install the dependencies and set up the pre-commit hooks:
 
 ```
-run install && run suite
+./run install 
 ```
 
-Use `run --help` for more information about the available tasks.  If you don't have `.` on your `$PATH`, then use `./run` instead.
+Next, generate the `requirements.txt` needed by readthedocs.io, and then commit both `poetry.lock` and `requirements.txt`:
+
+```
+./run requirements && git add poetry.lock docs/requirements.txt && git commit -m "Track dependencies"
+```
+
+Finally, run the test suite:
+
+```
+./run suite
+```
+
+Use `./run --help` or see the generated `DEVELOPER.md` file for more information about the development environment.

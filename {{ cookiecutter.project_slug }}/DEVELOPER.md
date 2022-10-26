@@ -119,7 +119,7 @@ to be available.  On Windows, it works fine with the standard Git Bash.
 The [`run`](run) script provides shortcuts for common developer tasks:
 
 ```
-$ run
+$ ./run --help
 
 ------------------------------------
 Shortcuts for common developer tasks
@@ -136,8 +136,6 @@ Basic tasks:
 - run test -ch: Run the unit tests with coverage and open the HTML report
 - run suite: Run the complete test suite, as for the GitHub Actions CI build
 ```
-
-If you don't have `.` on your `$PATH`, make sure to use `./run` instead.
 
 ## Integration with PyCharm
 
@@ -160,10 +158,8 @@ order.  In particular, if you do not run the install step, there will be no
 virtualenv for PyCharm to use:
 
 ```
-run install && run suite
+./run install && ./run suite
 ```
-
-If you don't have `.` on your `$PATH`, make sure to use `./run` instead.
 
 ### Open the Project
 
@@ -378,7 +374,7 @@ Version 0.1.0      unreleased
 Run the release step:
 
 ```
-run release 0.1.0
+./run release 0.1.0
 ```
 
 This updates `pyproject.toml` and the `Changelog` to reflect the released
@@ -389,7 +385,7 @@ and revert your commit (`git reset HEAD~1`) if you made a mistake.
 Finally, publish the release:
 
 ```
-run publish
+./run publish
 ```
 
 This builds the deployment artifacts, publishes the artifacts to PyPI, and
