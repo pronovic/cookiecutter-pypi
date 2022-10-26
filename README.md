@@ -45,7 +45,13 @@ copyright_year [2022]:
 
 > _Note:_ The `black_target`, `gha_matrix_os`, and `gha_matrix_python` fields are all comma-separated lists and must be quoted as shown.  The `black_target` is substituted into `pyproject.toml` and the `gha_` values are substituted into the matrix build for the GitHub Actions build in `.github/workflows/test-suite.yml`.  Start with the defaults unless you have a reason to change them.
 
-The project slug is the name of the resulting directory, so in this example the project will be generated in `sample-project`.  Change to that directory, and initialize a Git repository:
+The project slug is the name of the resulting directory, so in this example the project will be generated in `sample-project`:
+
+```
+cd sample-project
+```
+
+Then, initialize the Git repository:
 
 ```
 git init . && git add . && git commit -m "Initial revision based on pronovic/cookiecutter-pypi"
