@@ -14,7 +14,7 @@ pip install cookiecutter
 
 The resulting project depends on the [Poetry](https://python-poetry.org/) build tool.  You need to install only a Python 3 interpreter and Poetry.  Poetry itself takes care of everything else.  See the [instructions](POETRY.md).
 
-The instructions in `DEVELOPER.md` assume you are working a UNIX-style shell, such as bash. On Windows, you are expected to be using the Git bash emulator installed with [Git for Windows](https://gitforwindows.org/).
+The developer process described in the resulting `DEVELOPER.md` file assumes you are working a UNIX-style shell, such as bash. On Windows, you are expected to be using the Git bash emulator installed with [Git for Windows](https://gitforwindows.org/).
 
 ## Instructions for Use
 
