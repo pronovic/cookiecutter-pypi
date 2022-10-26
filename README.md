@@ -75,4 +75,4 @@ Finally, run the test suite:
 ./run suite
 ```
 
-Use `./run --help` or see the generated `DEVELOPER.md` file for more information about the development environment.
+Use `./run --help` to list available commands.  See the generated `DEVELOPER.md` file for more information about the development environment, including integration with [PyCharm](https://www.jetbrains.com/pycharm/download), etc.
