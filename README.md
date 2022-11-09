@@ -38,12 +38,10 @@ default_branch [master]:
 package [sample]:
 python_version [>=3.9,<4]:
 black_target ['py39', 'py310']:
-gha_matrix_os ['ubuntu-latest', 'macos-latest', 'windows-latest']:
-gha_matrix_python ['3.9', '3.10']:
 copyright_year [2022]:
 ```
 
-> _Note:_ The `black_target`, `gha_matrix_os`, and `gha_matrix_python` fields are all comma-separated lists and must be quoted as shown.  The `black_target` is substituted into `pyproject.toml` and the `gha_` values are substituted into the matrix build for the GitHub Actions build in `.github/workflows/test-suite.yml`.  Start with the defaults unless you have a reason to change them.
+> _Note:_ You will need to manually adjust `.github/workflows/test-suite.yml` to reflect the platforms and Python versions that you want to test.  The suggested workflow runs a matrix build on Linux for all supported Python versions, and a build on Windows and MacOS only for the latest Python version.  In GitHub Actions, the Linux runners are _much_ faster and more reliable, so this strategy seems to yield the best results.
 
 The project slug is the name of the resulting directory, so in this example the project will be generated in `sample-project`:
 

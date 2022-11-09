@@ -10,8 +10,6 @@
   "package": "sample",
   "python_version": ">=3.9,<4",
   "black_target": "'py39', 'py310'",
-  "gha_matrix_os": "'ubuntu-latest', 'macos-latest', 'windows-latest'",
-  "gha_matrix_python": "'3.9', '3.10'",
   "copyright_year": "{% now 'utc', '%Y' %}",
   "_extensions": ["jinja2_time.TimeExtension"]
 }
