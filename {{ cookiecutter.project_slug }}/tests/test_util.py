@@ -4,7 +4,7 @@
 from sample.util import upper_case
 
 
-class TestUti:
+class TestUtil:
     def test_upper_case(self):
         assert upper_case(None) is None
         assert upper_case("") == ""
