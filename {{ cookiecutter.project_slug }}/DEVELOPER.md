@@ -135,6 +135,14 @@ Basic tasks:
 - run test -c: Run the unit tests with coverage
 - run test -ch: Run the unit tests with coverage and open the HTML report
 - run suite: Run the complete test suite, as for the GitHub Actions CI build
+
+Additional tasks:
+
+- run docs: Build the Sphinx documentation for readthedocs.io
+- run docs -o: Build the Sphinx documentation and open in a browser
+- run publish: Publish the current code to PyPI and push to GitHub
+- run release: Release a specific version and tag the code
+- run requirements: Regenerate the docs/requirements.txt file
 ```
 
 ## Integration with PyCharm
