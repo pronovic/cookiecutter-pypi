@@ -61,12 +61,6 @@ Assuming you have already installed `poetry` (per the [instructions](POETRY.md))
 ./run install 
 ```
 
-Next, generate the `requirements.txt` needed by readthedocs.io, and then commit both `poetry.lock` and `requirements.txt`:
-
-```
-./run requirements && git add poetry.lock docs/requirements.txt && git commit -m "Track dependencies"
-```
-
 Finally, run the test suite:
 
 ```
