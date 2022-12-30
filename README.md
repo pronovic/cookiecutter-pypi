@@ -16,6 +16,10 @@ The resulting project depends on the [Poetry](https://python-poetry.org/) build 
 
 The developer process described in the resulting `DEVELOPER.md` file assumes you are working a UNIX-style shell, such as bash. On Windows, you are expected to be using the Git bash emulator installed with [Git for Windows](https://gitforwindows.org/).
 
+## Release Process
+
+By default, the release process in the generated `.github/workflows/test-suite.yml` workflow is configured to publish artifacts by attaching them to a release in the GitHub repository. (The generated `DEVELOPER.md` file contains instructions.)  Optionally, you can also publish to PyPI.  To do this, create an account at PyPI for yourself, and register your project.  Once the project exists, go to your PyPI [account settings](https://pypi.org/manage/account/) and create an API token with upload permissions for the new project.  In your GitHub repository, add a GitHub Actions secret called `PYPI_TOKEN` to hold the token.  Then, adjust `test-suite.yml` to set `publish-pypi: true`.
+
 ## Instructions for Use
 
 Use `cookiecutter` to execute the template:
