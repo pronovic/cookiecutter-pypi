@@ -45,8 +45,6 @@ black_target ['py39', 'py310']:
 copyright_year [2022]:
 ```
 
-> _Note:_ You will need to manually adjust `.github/workflows/test-suite.yml` to reflect the platforms and Python versions that you want to test.  The suggested workflow runs a matrix build on Linux for all supported Python versions, and a build on Windows and MacOS only for the latest Python version.  In GitHub Actions, the Linux runners are _much_ faster and more reliable, so this strategy seems to yield the best results.
-
 The project slug is the name of the resulting directory, so in this example the project will be generated in `sample-project`:
 
 ```
@@ -80,3 +78,5 @@ git add poetry.lock && git commit -m "Add initial poetry.lock" poetry.lock
 Then, you can push to your repository and test the GitHub Actions process.
 
 > _Note:_ To see what other commands are available, use `./run --help`.  See the generated `DEVELOPER.md` file for more information about the development environment, including integration with [PyCharm](https://www.jetbrains.com/pycharm/download), etc.
+
+You will need to manually adjust `.github/workflows/test-suite.yml` to reflect the platforms and Python versions that you want to test.  The suggested workflow runs a matrix build on Linux for all supported Python versions, and a build on Windows and MacOS only for the latest Python version.  In GitHub Actions, the Linux runners are _much_ faster and more reliable, so this strategy seems to yield the best results.
