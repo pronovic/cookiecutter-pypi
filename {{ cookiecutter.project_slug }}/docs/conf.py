@@ -314,7 +314,7 @@ man_pages = [(master_doc, PROJECT, "%s Documentation" % PROJECT, [author], 1)]
 texinfo_documents = [
     (
         master_doc,
-        PROJECT
+        PROJECT,
         "%s Documentation" % PROJECT,
         author,
         PROJECT,
