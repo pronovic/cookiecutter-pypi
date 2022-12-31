@@ -71,4 +71,12 @@ Finally, run the test suite:
 ./run suite
 ```
 
-Use `./run --help` to list available commands.  See the generated `DEVELOPER.md` file for more information about the development environment, including integration with [PyCharm](https://www.jetbrains.com/pycharm/download), etc.
+Assuming the test suite passes, you'll have to check in `poetry.lock` with the current version of all dependencies:
+
+```
+git commit -m "Update poetry.lock" poetry.lock"
+```
+
+Then, you can push to your repository and test the GitHub Actions process.
+
+> _Note:_ To see what other commands are available, use `./run --help`.  See the generated `DEVELOPER.md` file for more information about the development environment, including integration with [PyCharm](https://www.jetbrains.com/pycharm/download), etc.
