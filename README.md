@@ -74,7 +74,7 @@ Finally, run the test suite:
 Assuming the test suite passes, you'll have to check in `poetry.lock` with the current version of all dependencies:
 
 ```
-git commit -m "Update poetry.lock" poetry.lock"
+git commit -m "Update poetry.lock" poetry.lock
 ```
 
 Then, you can push to your repository and test the GitHub Actions process.
