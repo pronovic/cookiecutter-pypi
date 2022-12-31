@@ -30,7 +30,7 @@ classifiers=[
 [tool.poetry-dynamic-versioning]
 enable = true
 pattern = '^[vV](?P<base>\d+\.\d+\.\d+)'  # this extracts the version from our vX.Y.Z tag format
-format-jinja = "{% if distance == 0 and not dirty %}{{ base }}{% else %}{{ base }}+{{ distance }}.{{ commit }}{% endif %}"
+format-jinja = {% raw %}"{% if distance == 0 and not dirty %}{{ base }}{% else %}{{ base }}+{{ distance }}.{{ commit }}{% endif %}"{% endraw %}
 
 [tool.poetry.dependencies]
 python = "{{ cookiecutter.python_version }}"
