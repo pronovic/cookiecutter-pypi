@@ -8,8 +8,8 @@
   "github_repo": "samplerepo",
   "default_branch": "master",
   "package": "sample",
-  "python_version": ">=3.9,<4",
-  "black_target": "'py39', 'py310'",
+  "python_version": ">=3.11,<4",
+  "black_target": "'py311'",
   "copyright_year": "{% now 'utc', '%Y' %}",
   "_extensions": ["jinja2_time.TimeExtension"]
 }
