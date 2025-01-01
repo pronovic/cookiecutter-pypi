@@ -38,7 +38,7 @@ author_name [First Last]:
 author_email [first.last@example.com]:
 github_owner [owner]:
 github_repo [samplerepo]:
-default_branch [master]:
+default_branch [main]:
 package [sample]:
 python_version [>=3.9,<4]:
 black_target ['py39', 'py310']:
