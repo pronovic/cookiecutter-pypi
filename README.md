@@ -9,7 +9,7 @@ The project structure follows the pattern from the [apologies](https://github.co
 To use this template, you need to install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/):
 
 ```
-pip install cookiecutter
+pipx install cookiecutter
 ```
 
 The resulting project depends on the [Poetry](https://python-poetry.org/) build tool.  You need to install only a Python 3 interpreter and Poetry.  Poetry itself takes care of everything else.  See the [instructions](POETRY.md).
