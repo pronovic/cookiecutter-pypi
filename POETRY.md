@@ -5,7 +5,7 @@ sure that you have a working Python 3 enviroment and install Poetry itself.
 
 ### Poetry Version
 
-The project is designed to work with Poetry >= 1.8.0.  If you already have an older
+The project is designed to work with Poetry >= 2.0.0.  If you already have an older
 version of Poetry installed on your system, upgrade it first.
 
 ### MacOS
@@ -24,7 +24,12 @@ Finally, install Poetry itself:
 
 ```
 pipx install poetry
-pipx inject poetry poetry-dynamic-versioning
+```
+
+To upgrade this installation later, use:
+
+```
+pipx upgrade poetry
 ```
 
 ### Debian
@@ -42,7 +47,12 @@ Finally, install Poetry itself:
 
 ```
 pipx install poetry
-pipx inject poetry poetry-dynamic-versioning
+```
+
+To upgrade this installation later, use:
+
+```
+pipx upgrade poetry
 ```
 
 ### Windows
@@ -61,7 +71,12 @@ Finally, install Poetry itself:
 
 ```
 pipx install poetry
-pipx inject poetry poetry-dynamic-versioning
+```
+
+To upgrade this installation later, use:
+
+```
+pipx upgrade poetry
 ```
 
 > _Note:_ The development environment (the `run` script, etc.) expects a bash
