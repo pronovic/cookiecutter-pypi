@@ -38,7 +38,7 @@ authors = [ { name="{{ cookiecutter.author_name }}", email="{{ cookiecutter.auth
 license = "Apache-2.0"
 readme = "PyPI.md"
 dynamic = [ "classifiers", "version" ]
-dependencies = [ ]
+dependencies = []
 
 [project.urls]
 homepage = "https://pypi.org/project/{{ cookiecutter.project_slug }}/"
