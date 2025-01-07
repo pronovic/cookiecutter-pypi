@@ -8,7 +8,7 @@
   "github_repo": "samplerepo",
   "default_branch": "main",
   "package": "sample",
-  "python_version": ">=3.12,<4",
-  "black_target": "'py312'",
+  "python_version": ">=3.10,04",
+  "black_target": "'py310'",
   "copyright_year": "{% now 'utc', '%Y' %}"
 }
