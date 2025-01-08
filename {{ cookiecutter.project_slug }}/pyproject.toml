@@ -65,7 +65,7 @@ colorama = ">=0.4.6,<1.0.0"
 [tool.black]
 line-length = 132
 target-version = [{{ cookiecutter.black_target }}]
-include = '(src\/scripts\/.*$|\.pyi?$)'
+include = '\.pyi?$'
 exclude = '''
 /(
     \.git
