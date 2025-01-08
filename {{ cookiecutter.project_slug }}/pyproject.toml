@@ -4,6 +4,7 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry]
 requires-poetry = ">=2.0.0"
+packages = [ { include="{{ cookiecutter.package }}", from="src" } ]
 include = [
    { path='Changelog', format='sdist' },
    { path='NOTICE', format='sdist' },
@@ -12,10 +13,7 @@ include = [
    { path='docs', format='sdist' },
    { path='tests', format='sdist' },
 ]
-packages = [ 
-   { include="{{ cookiecutter.package }}", from="src" },
-]
-classifiers=[
+classifiers = [
    "Development Status :: 4 - Beta",
 ]
 version = "0.0.0" # published version is managed using Git tags (see below)
