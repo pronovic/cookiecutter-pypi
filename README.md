@@ -41,7 +41,7 @@ github_repo [samplerepo]:
 default_branch [main]:
 package [sample]:
 python_version [>=3.9,<4]:
-black_target ['py39', 'py310']:
+black_target [py39 py310]:
 copyright_year [2022]:
 ```
 
