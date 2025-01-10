@@ -1,1 +1,1 @@
-{{ cookiecutter.pyenv_target | replace " ", "\n" }}
+{{ cookiecutter.pyenv_target | replace(" ", "\n") }}
