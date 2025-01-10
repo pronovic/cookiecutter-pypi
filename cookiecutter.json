@@ -9,6 +9,6 @@
   "default_branch": "main",
   "package": "sample",
   "python_version": ">=3.10,<4",
-  "black_target": "'py310'",
+  "black_target": "'py310 py311 py312 py313'",
   "copyright_year": "{% now 'utc', '%Y' %}"
 }
