@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 # vim: set ft=python ts=4 sw=4 expandtab:
 
-from {{ cookiecutter.package }}.util import upper_case
+from sample.util import upper_case
 
 
 class TestUtil:
