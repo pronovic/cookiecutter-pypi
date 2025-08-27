@@ -8,12 +8,10 @@ task_checks() {
    echo ""
    run_command checktabs
    echo ""
-   run_command black --check
+   run_command ruffformat --check
    echo ""
-   run_command isort --check-only
+   run_command rufflint
    echo ""
    run_command mypy
-   echo ""
-   run_command pylint
 }
 

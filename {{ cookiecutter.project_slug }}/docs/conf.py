@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# pylint: skip-file
-#
 # Documentation build configuration file, based on existing
 # documentation for Requests (https://github.com/psf/requests).
 #
@@ -16,7 +13,7 @@
 import os
 import sys
 from pathlib import Path
-from importlib_metadata import metadata
+from importlib.metadata import metadata
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
