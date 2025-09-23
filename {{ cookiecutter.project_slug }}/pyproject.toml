@@ -29,6 +29,7 @@ classifiers = [
 dependencies = [
 ]
 
+# TODO: validate that these URLs are all valid
 [project.urls]
 Homepage = "https://pypi.org/project/{{ cookiecutter.project_slug }}/"
 Repository = "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}"
