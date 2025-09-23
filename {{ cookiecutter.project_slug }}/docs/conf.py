@@ -32,7 +32,7 @@ GITHUB_REPO = "{{ cookiecutter.github_repo }}"
 _METADATA = metadata("{{ cookiecutter.project_slug }}")
 PROJECT = _METADATA["Name"]
 SUMMARY = _METADATA["Summary"]
-AUTHOR = _METADATA["Author"]
+AUTHOR = _METADATA["Author-email"]
 VERSION = _METADATA["Version"]
 
 # Dump metadata so it's obvious in the build log
