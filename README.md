@@ -72,7 +72,7 @@ Finally, run the test suite:
 Assuming the test suite passes, you'll have to check in `uv.lock` with the current version of all dependencies:
 
 ```
-git add uv.lock && git commit -m "Add initial uv.lock" i.lock
+git add uv.lock && git commit -m "Add initial uv.lock" uv.lock
 ```
 
 Then, you can push to your repository and test the GitHub Actions process.
