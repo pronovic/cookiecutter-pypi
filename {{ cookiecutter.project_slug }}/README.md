@@ -1,4 +1,4 @@
- --short# {{ cookiecutter.project_name }}
+ # {{ cookiecutter.project_name }}
 
 [![pypi](https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg)](https://pypi.org/project/{{ cookiecutter.project_slug }}/)
 [![license](https://img.shields.io/github/license/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }})](https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/blob/{{ cookiecutter.default_branch }}/LICENSE)
