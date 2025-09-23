@@ -6,7 +6,7 @@ Release v\ |version|
 .. image:: https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg
     :target: https://pypi.org/project/{{ cookiecutter.project_slug }}/
 
-.. image:: https://img.shields.io/pypi/l/{{ cookiecutter.project_slug }}.svg
+.. image:: https://img.shields.io/github/license/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}
     :target: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/blob/{{ cookiecutter.default_branch }}/LICENSE
 
 .. image:: https://img.shields.io/pypi/wheel/{{ cookiecutter.project_slug }}.svg

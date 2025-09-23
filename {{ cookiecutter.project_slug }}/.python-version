@@ -1,1 +1,1 @@
-{{ cookiecutter.pyenv_target | trim | replace(" ", "\n") }}
+{{ cookiecutter.default_python_version }}
