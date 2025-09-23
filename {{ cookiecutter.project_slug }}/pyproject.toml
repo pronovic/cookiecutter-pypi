@@ -29,7 +29,7 @@ classifiers = [
 dependencies = [
 ]
 
-# TODO: validate that these URLs are all valid
+# TODO: confirm that these URLs are all valid
 [project.urls]
 Homepage = "https://pypi.org/project/{{ cookiecutter.project_slug }}/"
 Repository = "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}"
@@ -66,7 +66,7 @@ cache-keys = [{ file = "pyproject.toml" }, { git = { commit = true, tags = true 
 [tool.uv-dynamic-versioning]
 fallback-version = "0.0.0"
 pattern = '^[vV](?P<base>\d+\.\d+\.\d+)'  # this extracts the version from our vX.Y.Z tag format
-format-jinja = "{% if distance == 0 and not dirty %}{{ base }}{% else %}{{ base }}+{{ distance }}.{{ commit }}{% endif %}"
+format-jinja = {% raw %}"{% if distance == 0 and not dirty %}{{ base }}{% else %}{{ base }}+{{ distance }}.{{ commit }}{% endif %}"{% endraw %}
 
 [tool.coverage.paths]
 source = [ "src" ]

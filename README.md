@@ -2,7 +2,7 @@
 
 This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) template to create a Python project to be distributed at [PyPI](https://pypi.org/).  It includes integration with [GitHub Actions](https://docs.github.com/en/actions), [readthedocs.io](https://readthedocs.org/) and [coveralls.io](https://coveralls.io/).
 
-The project structure follows the pattern from the [apologies](https://github.com/pronovic/apologies) demonstration project.  [Poetry](https://python-poetry.org/) is used manage Python packaging and dependencies, and most day-to-day tasks (such as running unit tests from the command line) are orchestrated through Poetry using my [run-script-framework](https://github.com/pronovic/run-script-framework).  A coding standard is enforced using [Black](https://pypi.org/project/black/), [isort](https://pypi.org/project/isort/) and [Pylint](https://pypi.org/project/pylint/).  Python 3 type hinting is validated using [MyPy](https://pypi.org/project/mypy/).  The GitHub Actions workflow is a matrix build implemented using my [gha-shared-workflows](https://github.com/pronovic/gha-shared-workflows).  There are also pre-commit hooks to enforce the code style checks.  A generated `DEVELOPER.md` file provides notes about how the code is structured, how to set up a development environment, etc.
+The project structure follows the pattern from the [apologies](https://github.com/pronovic/apologies) demonstration project.  [UV](https://docs.astral.sh/uv/) is used manage Python packaging and dependencies, and most day-to-day tasks (such as running unit tests from the command line) are orchestrated through UV using my [run-script-framework](https://github.com/pronovic/run-script-framework).  A coding standard is enforced using [Ruff](https://pypi.org/project/ruff/).  Python 3 type hinting is validated using [MyPy](https://pypi.org/project/mypy/).  The GitHub Actions workflow is a matrix build implemented using my [gha-shared-workflows](https://github.com/pronovic/gha-shared-workflows).  There are also pre-commit hooks to enforce the code style checks.  A generated `DEVELOPER.md` file provides notes about how the code is structured, how to set up a development environment, etc.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ To use this template, you need to install [cookiecutter](https://cookiecutter.re
 pipx install cookiecutter
 ```
 
-The resulting project depends on the [Poetry](https://python-poetry.org/) build tool.  You need to install only a Python 3 interpreter and Poetry.  Poetry itself takes care of everything else.  See the [instructions](POETRY.md).
+The resulting project depends on the [UV](https://docs.astral.sh/uv/) build tool.  All you need to do install UV itself, following the [instructions](https://docs.astral.sh/uv/getting-started/installation/).  UV will take care of installing the required Python interpreter and all of the dependencies.
 
 The developer process described in the resulting `DEVELOPER.md` file assumes you are working a UNIX-style shell, such as bash. On Windows, you are expected to be using the Git bash emulator installed with [Git for Windows](https://gitforwindows.org/).
 
@@ -60,7 +60,7 @@ git init . && git add . && git commit -m "Initial revision based on pronovic/coo
 Assuming you have already installed `poetry` (per the [instructions](POETRY.md)), you can get things started using the `run` script.  First, install the dependencies and set up the pre-commit hooks:
 
 ```
-./run install 
+uv lock && ./run install 
 ```
 
 Finally, run the test suite:
@@ -69,14 +69,8 @@ Finally, run the test suite:
 ./run suite
 ```
 
-Assuming the test suite passes, you'll have to check in `poetry.lock` with the current version of all dependencies:
-
-```
-git add poetry.lock && git commit -m "Add initial poetry.lock" poetry.lock
-```
-
 Then, you can push to your repository and test the GitHub Actions process.
 
 > _Note:_ To see what other commands are available, use `./run --help`.  See the generated `DEVELOPER.md` file for more information about the development environment, including integration with [PyCharm](https://www.jetbrains.com/pycharm/download), etc.
 
-You will need to manually adjust `.github/workflows/test-suite.yml` to reflect the platforms and Python versions that you want to test.  The suggested workflow runs a matrix build on Linux for all supported Python versions, and a build on Windows and MacOS only for the latest Python version.  In GitHub Actions, the Linux runners are _much_ faster and more reliable, so this strategy seems to yield the best results.
+You will need to manually adjust `pyproject.toml` to properly reflect your URLs and the metadata you want to publish.  You will also need to adjust `.github/workflows/test-suite.yml` to reflect the platforms and Python versions that you want to test.  The suggested workflow runs a matrix build on Linux for all supported Python versions, and a build on Windows and MacOS only for the latest Python version.  In GitHub Actions, the Linux runners are _much_ faster and more reliable, so this strategy seems to yield the best results.
