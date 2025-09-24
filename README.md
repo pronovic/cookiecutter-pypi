@@ -96,4 +96,4 @@ Whenever you want to change the set of supported versions in your own package, y
 - `pyproject.toml`
 - `.github/workflows/test-suite.yml`
 
-For local testing, `run install` will use the version in `.python-version` by default.  If you want to test with a different version, export that version in your shell (i.e. `export UV_PYTHON=3.14`) and execute `run install` again.  This will rebuild the virtualenv to use the new interpreter.  Don't forget to `unset UV_PYTHON` and rebuild the virtualenv when you're done testing.
+For local testing, `./run install` will use the version in `.python-version` by default.  If you want to test with a different version, export that version in your shell (i.e. `export UV_PYTHON=3.14`) and execute `./run install` again.  This will rebuild the virtualenv to use the new interpreter.  Don't forget to `unset UV_PYTHON` and rebuild the virtualenv when you're done testing.
