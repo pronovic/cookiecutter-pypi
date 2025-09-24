@@ -87,7 +87,7 @@ The generated `run` script is the entry point for developers and for the GitHub 
 
 My general policy is to support the most recent four versions of the Python interpreter, and the template is designed around this assumption.
 
-For example, starting in late 2025, I dropped support for Python 3.10, leaving support for Python 3.11, 3.12, 3.13, and 3.14.  I think that this represents a decent compromise between broad applicability &mdash; making the package available to as many users as possible &mdash; and the non-zero overhead of supporting each additional version.  These days Python is released about once per year, so most people should be able to run one of the supported versions, even on a long-term support Linux distribution.  Every year, I update the template at approximately the same time I update my packages to support the latest version of Python.
+For example, starting in late 2025, I dropped support for Python 3.10, leaving support for Python 3.11, 3.12, 3.13, and 3.14.  I think that this represents a decent compromise between broad applicability &mdash; making the package available to as many users as possible &mdash; and the non-zero overhead of supporting each additional version.  These days Python is released about once per year, so most people should be able to run one of the supported versions, even on a long-term support Linux distribution.  Every year, I update the template at approximately the same time I update my other open source packages to support the latest version of Python.
 
 Whenever you want to change the set of supported versions in your own package, you need to adjust the following files:
 
