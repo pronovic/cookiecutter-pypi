@@ -4,7 +4,7 @@ sphinx:
 build:
   os: ubuntu-22.04
   tools:
-    python: {{ cookiecutter.python_version }}
+    python: 3.11
 python:
   install:
     - method: pip

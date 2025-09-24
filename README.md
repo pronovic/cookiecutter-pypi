@@ -31,18 +31,16 @@ cookiecutter gh:pronovic/cookiecutter-pypi
 When prompted, provide values for all of the template parameters:
 
 ```
-project_slug [sample-project]:
-project_name [Sample Project]:
-short_description [Short description]:
-author_name [First Last]:
-author_email [first.last@example.com]:
-github_owner [owner]:
-github_repo [samplerepo]:
-default_branch [main]:
-package [sample]:
-python_version [>=3.9,<4]:
-black_target [py39 py310]:
-copyright_year [2022]:
+  [1/10] project_slug (sample-project):
+  [2/10] project_name (Sample Project):
+  [3/10] short_description (Short description):
+  [4/10] author_name (First Last):
+  [5/10] author_email (first.last@example.com):
+  [6/10] github_owner (owner):
+  [7/10] github_repo (samplerepo):
+  [8/10] default_branch (main):
+  [9/10] package (sample):
+  [10/10] copyright_year (2025):
 ```
 
 The project slug is the name of the resulting directory, so in this example the project will be generated in `sample-project`:
@@ -77,6 +75,25 @@ git add uv.lock && git commit -m "Add initial uv.lock" uv.lock
 
 Then, you can push to your repository and test the GitHub Actions process.
 
-> _Note:_ To see what other commands are available, use `./run --help`.  See the generated `DEVELOPER.md` file for more information about the development environment, including integration with [PyCharm](https://www.jetbrains.com/pycharm/download), etc.
+> **Note:** you may need to manually adjust `pyproject.toml` to properly reflect your URLs and the metadata you want to publish.
 
-You will need to manually adjust `pyproject.toml` to properly reflect your URLs and the metadata you want to publish.  You will also need to adjust `.github/workflows/test-suite.yml` to reflect the platforms and Python versions that you want to test.  The suggested workflow runs a matrix build on Linux for all supported Python versions, and a build on Windows and MacOS only for the latest Python version.  In GitHub Actions, the Linux runners are _much_ faster and more reliable, so this strategy seems to yield the best results.
+## Development Process
+
+See the generated `DEVELOPER.md` file for more information about the development environment, including integration with [PyCharm](https://www.jetbrains.com/pycharm/download), etc.
+
+The generated `run` script is the entry point for developers and for the GitHub Actions CI/CD process.  It wraps `uv` and other build tools to standardize various common tasks.  To see what other commands are available, use `./run --help`.
+
+## Python Version
+
+My general policy is to support the most recent four versions of the Python interpreter, and the template is designed around this assumption.
+
+For example, starting in late 2025, I dropped support for Python 3.10, leaving support for Python 3.11, 3.12, 3.13, and 3.14.  I think that this represents a decent compromise between broad applicability &mdash; making the package available to as many users as possible &mdash; and the non-zero overhead of supporting each additional version.  These days Python is released about once per year, so most people should be able to run one of the supported versions, even on a long-term support Linux distribution.  Every year, I update the template at approximately the same time I update my packages to support the latest version of Python.
+
+Whenever you want to change the set of supported versions in your own package, you need to adjust the following files:
+
+- `.python-version`
+- `.readthedocs.yaml`
+- `pyproject.toml`
+- `.github/workflows/test-suite.yml`
+
+For local testing, `run install` will use the version in `.python-version` by default.  If you want to test with a different version, export that version in your shell (i.e. `export UV_PYTHON=3.14`) and execute `run install` again.  This will rebuild the virtualenv to use the new interpreter.  Don't forget to `unset UV_PYTHON` and rebuild the virtualenv when you're done testing.
