@@ -55,7 +55,7 @@ Then, initialize the Git repository:
 git init . && git add . && git commit -m "Initial revision based on pronovic/cookiecutter-pypi"
 ```
 
-Assuming you have already installed `poetry` (per the [instructions](POETRY.md)), you can get things started using the `run` script.  First, install the dependencies and set up the pre-commit hooks:
+Assuming you have already installed `uv` (per the [instructions](https://docs.astral.sh/uv/getting-started/installation/)), you can get things started using the `run` script.  First, install the dependencies and set up the pre-commit hooks:
 
 ```
 uv lock && ./run install 
