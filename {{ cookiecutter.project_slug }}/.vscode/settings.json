@@ -16,7 +16,6 @@
     "files.exclude": {
         "LICENSE": true,
         "NOTICE": true,
-        "PyPI.md": true,
         "SECURITY.md": true,
         "build": true,
         "dist": true,
